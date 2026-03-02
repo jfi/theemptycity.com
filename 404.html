@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+
+    <script>
+      // Base URL — the path suffix is appended to this
+      var BASE_URL = 'https://theemptycity.com/posts/'
+
+      // Fallback if the path is somehow empty
+      var DEFAULT_URL = 'https://theemptycity.com'
+
+      var path = window.location.pathname.replace(/^\//, '')
+
+      if (path) {
+        window.location.replace(BASE_URL + path)
+      } else {
+        window.location.replace(DEFAULT_URL)
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
